@@ -1,0 +1,210 @@
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5e5e5e;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .btn-print {
+            background: #28a745;
+        }
+
+        .btn-print:hover {
+            background: #218838;
+        }
+
+        /* Estilo dos bilhetes */
+        .rifas-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            page-break-inside: avoid;
+        }
+
+        .canhoto {
+            width: 35%;
+            height: 200px;
+            padding: 15px;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-right: 3px dotted black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bilhete {
+            padding: 15px;
+            width: 65%;
+            height: 200px;
+            border-left: 3px dotted black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .numero-bilhete {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #007bff;
+            margin: 10px 0;
+        }
+
+        .titulo-rifa {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .premio-rifa {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .valor-rifa {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            color: #133172ff;
+            margin-bottom: 10px;
+        }
+
+        .data-rifa {
+            font-size: 12px;
+            text-align: center;
+            color: #666;
+        }
+
+        .linha-canhoto {
+            border-bottom: 1px dashed #999;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para impressão */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            .rifas-container, .rifas-container * {
+                visibility: visible;
+            }
+            .rifas-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .container {
+                page-break-inside: avoid;
+            }
+        }
+
+        .actions {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .info-rifa {
+            background: #e9f7ef;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .info-rifa h3 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+
+
+
+        
